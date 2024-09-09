@@ -17,14 +17,15 @@
     align-items: center;
 }
 
-.penel{
+.panel{
     width: 80%;
     height: 80%;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     border-radius: 10px;
+    overflow: hidden;
 }
 
-.penelTop{
+.panelTop{
     width: 100%;
     height: 60px;
     background-color: rgba(3, 0, 0, 0.82);
@@ -35,11 +36,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 10%;
 }
 
 .elements{
     display: flex;
+    align-items: center;
     gap: 15px;
 
     color: white;
@@ -81,7 +83,7 @@
     background-color: rgba(3, 0, 0, 0.82);
 }
 
-.penelBottom{
+.panelBottom{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -92,3 +94,14 @@
 
 
 
+@media (max-width:630px) {
+    .elements{
+        font-size: 0.75rem;
+    }
+
+    .panel{
+        width: 90%;
+        height: 80%;
+    }
+
+}

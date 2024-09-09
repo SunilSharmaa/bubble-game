@@ -6,7 +6,7 @@ let startingCountdownVariable = 4;
 
 //starting countdown
 function startingCountdownMessage() {
-    document.querySelector(".penelBottom").innerHTML = `<h2>Game will start in...</h2>`;
+    document.querySelector(".panelBottom").innerHTML = `<h2>Game will start in...</h2>`;
 }
 
 let startingCountdown = setInterval(function() {
@@ -16,10 +16,10 @@ let startingCountdown = setInterval(function() {
         clearInterval(startingCountdown);
     }
     else {
-        document.querySelector(".penelBottom").innerHTML = `<h2>${startingCountdownVariable}</h2>`;
+        document.querySelector(".panelBottom").innerHTML = `<h2>${startingCountdownVariable}</h2>`;
     }
 
-}, 2000);
+}, 1000);
 
 //making bubble
 function makeBubble() {
@@ -30,7 +30,7 @@ for (let i = 1; i <= 112; i++) {
     bubbles += `<div class="bubble">${randomNumber}</div>`;
 }
 
-document.querySelector(".penelBottom").innerHTML = bubbles;
+document.querySelector(".panelBottom").innerHTML = bubbles;
 }
 
 //timer countdown function
@@ -42,7 +42,7 @@ function timerCountdown() {
         }
         else{
             clearInterval(setIntervalVar);
-            document.querySelector(".penelBottom").innerHTML = `<h2>Times Up!!<br>Your Score: ${score}</h2>`;
+            document.querySelector(".panelBottom").innerHTML = `<h2>Times Up!!<br>Your Score: ${score}</h2>`;
         }
         
     },1000)
@@ -61,7 +61,7 @@ function increaseScore() {
 }
 
 //getting clicked number
-document.querySelector(".penelBottom").addEventListener("click", function(bubbleNumber) {
+document.querySelector(".panelBottom").addEventListener("click", function(bubbleNumber) {
     let clickedNumber = Number(bubbleNumber.target.textContent);
     if(clickedNumber === hitRandomNumber) {
         increaseScore();
@@ -73,9 +73,9 @@ document.querySelector(".penelBottom").addEventListener("click", function(bubble
 startingCountdownMessage();
 
 setTimeout(function() {
-    setTimeout(makeBubble, 5000);
-    setTimeout(timerCountdown, 5000);
-    setTimeout(gettingNewHit, 5000);
+    setTimeout(makeBubble, 2000);
+    setTimeout(timerCountdown, 3000);
+    setTimeout(gettingNewHit, 2000);
 }, 3000);
 
 
